@@ -1,0 +1,14 @@
+api_version: 1.0
+cspace:
+    - joint0
+    - joint1
+    - joint2
+    - joint3
+    - joint4
+    - joint5
+root_link: link0
+default_q: [
+    0.00, 0.00, 0.00, 0.00, 0.00, 0.00
+]
+cspace_to_urdf_rules: []
+composite_task_spaces: []

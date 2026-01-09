@@ -1,0 +1,31 @@
+<가상환경 세팅>
+1. Isaacsim설치
+-Isaacsim 4.2.0압축파일 다운로드
+-세팅 순서:
+1) C드라이브 내부 경로에 압축풀기(작성자는 C:/에 압축을 풀었음)
+2) Anaconda 가상환경 설정(ex) conda create -n env_isaacsim)
+3) 가상환경 접속 후
+>> cd C:\isaacsim
+>> post_install.bat
+>> isaac-sim.selector.bat
+START버튼 클릭 -> isaacsim 실행
+
+2. 가상공정 세팅
+1)외부 파일 세팅
+- ik_solver.py파일을 아래의 경로로 이동
+>> (설치한 경로)/isaacsim_4.2.0/kit/python/Lib
+- exts.zip을 아래의 파일 경로로 이동후 기존의 exts폴더를 지운 후 압축 풀기
+>> (설치한 경로)/isaacsim_4.2.0/kit
+- intelligence.zip파일을 "(설치한 경로)/isaacsim_4.2.0"로 이동 후 압축 풀기
+2) 가상환경 내부 세팅
+- Isaacsim실행 후 상단 메뉴바에서 Window/Extensions로 이동
+- 검색창에 conveyor라고 친 후 하단에 나오는 ISAACSIM CONVEYOR BELT UTILITY와 ISAACSIM CONVEYOR BELT UTILITY UI성화 시킴
+이때  ISAACSIM CONVEYOR BELT UTILITY버전은 v0.4.0이어야 하며  ISAACSIM CONVEYOR BELT UTILITY UI 버전은 v1.1.0이어야 함
+- 검색창에 ik, mobility, mobility1, placstic, data_send 를 검색하고 모두 활성화
+-  Isaacsim실행 후 상단 메뉴바에서 Window/Visual Scripting/ ActionGraph로 이동 -> 아래에 ActionGraph에 ogn검색후 ik, mobility, mobility1, placstic, data_send extensions가 있는지 확인
+- Anaconda 접속 후 가상환경 활성화 -> isaacsim_4.2.0디렉토리로 이동 후 아래 명령어 작성
+>>"C:\isaacsim_4.2.0\kit\python\python.exe" -m pip install influxdb
+
+3. 가상공정 실행
+1) 상단 메뉴의 File에서 open창을 킨 후 "C:\isaacsim_4.2.0\intelligence\ujin_isaacsim\indy7.usd"를 open
+2) 왼쪽 메뉴칸에 실행 버튼 실행

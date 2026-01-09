@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="Assem1.STEP">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.249230495450032 0.0678559941684953 0.93360518628555"
+        rpy="0 0 0" />
+      <mass
+        value="22635.0080369144" />
+      <inertia
+        ixx="8277.98773703151"
+        ixy="128.677868532024"
+        ixz="-121.838849431614"
+        iyy="126024.72401148"
+        iyz="147.040853396298"
+        izz="127832.021108156" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem1.STEP/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem1.STEP/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="molding">
+    <inertial>
+      <origin
+        xyz="1.20877891894546 -9.84661095948525E-06 1.90099997947244"
+        rpy="0 0 0" />
+      <mass
+        value="1066.34140420998" />
+      <inertia
+        ixx="298.745276880822"
+        ixy="6.70490565298063E-06"
+        ixz="-6.70490563854861E-06"
+        iyy="205.580537184973"
+        iyz="-1.45820368849147E-05"
+        izz="199.367142612277" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem1.STEP/meshes/molding.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.647058823529412 0.517647058823529 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem1.STEP/meshes/molding.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint1"
+    type="prismatic">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="molding" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+</robot>
