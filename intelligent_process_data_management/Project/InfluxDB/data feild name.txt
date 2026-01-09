@@ -1,0 +1,16 @@
+1. 로봇 관련 필드
+   - joint_0 ~ joint_5 (로봇 조인트 토크)
+   - x, y, z, w (로봇 위치/회전)
+
+2. 프로세스 데이터 필드
+   - pressure_bar (압력)
+   - temperature_c (온도)
+   - speed_mm_per_s (속도)
+   - humidity_percent (습도)
+
+3. 생산 관련 필드
+   - finished_product_count (완제품 수)
+   - raw_material_black (흑색 원료)
+   - raw_material_yellow (노란색 원료)
+   - raw_material_red (적색 원료)
+   - raw_material_blue (청색 원료)

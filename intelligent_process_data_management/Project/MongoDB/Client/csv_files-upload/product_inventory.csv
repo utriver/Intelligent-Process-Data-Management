@@ -1,0 +1,11 @@
+product_type,event,quantity,event_time
+cap,stocktake,66,2025-05-01 14:50:00
+cap,outbound,88,2025-05-01 15:08:00
+bottle,inbound,29,2025-05-01 15:12:00
+cap,inbound,180,2025-05-01 15:18:00
+bottle,stocktake,144,2025-05-01 15:48:00
+cap,outbound,100,2025-05-01 15:14:00
+cap,inbound,13,2025-05-01 15:22:00
+cap,inbound,68,2025-05-01 14:29:00
+bottle,stocktake,166,2025-05-01 15:59:00
+bottle,outbound,176,2025-05-01 15:03:00
