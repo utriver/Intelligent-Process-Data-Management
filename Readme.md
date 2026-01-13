@@ -55,3 +55,81 @@ $$
     - InfluxDB를 통해 10ms단위의 시계열 데이터를 지연 없이 처리하고 시각화함.
 - **디지털 트윈을 통한 사전 검증**
     - 가상 공정에서 발생시킨 데이터를 활용해 실제 설비 도입 전 데이터 흐름 및 시각화 유효성을 성공적으로 검증함.
+
+
+### 📗 폴더 설명
+```
+pressure setting: 현실 공정 세팅에 대한 파일(온습도, 보압, 사출속도)
+intelligent_process_data_management: 데이터 베이스 세팅 관련 파일
+IssacSim setting : 가상환경 세팅 관련 파일
+```
+
+#### 설치방법
+**1. 가상환경 세팅**
+
+- Isaac Sim 4.2.0 설치
+
+- 압축 해제: C:/ 경로에 압축을 풉니다. (작성자 기준 경로: C:/isaacsim_4.2.0)
+
+**2. Anaconda 가상환경 설정:**
+```
+conda create -n env_isaacsim python=3.10
+conda activate env_isaacsim
+cd C:\isaacsim_4.2.0
+post_install.bat
+isaac-sim.selector.bat
+```
+- 실행: Selector 창에서 START 버튼을 클릭하여 Isaac Sim을 실행합니다.
+
+**3. 가상공정 세팅**
+
+**외부 파일 세팅**
+
+압축 해제된 폴더 내의 파일들을 아래 경로에 맞춰 이동 및 교체합니다.
+
+- IK Solver 설정: ik_solver.py 파일을 다음 경로로 이동
+
+  - C:/isaacsim_4.2.0/kit/python/Lib
+
+- Extensions 교체: exts.zip 파일을 다음 경로로 이동 후, 기존 exts 폴더를 삭제하고 압축 해제
+
+  - C:/isaacsim_4.2.0/kit
+
+- Intelligence 데이터: intelligence.zip 파일을 다음 경로로 이동 후 압축 해제
+
+  - C:/isaacsim_4.2.0
+
+**가상환경 내부 설정 (Extensions)**
+
+Isaac Sim 실행 후 상단 메뉴바에서 Window > Extensions로 이동하여 다음 설정을 진행합니다.
+
+1. Conveyor 설정: conveyor 검색 후 아래 항목 활성화 (버전 확인 필수)
+
+  - ISAACSIM CONVEYOR BELT UTILITY: v0.4.0
+
+  - ISAACSIM CONVEYOR BELT UTILITY UI: v1.1.0
+
+2. 필수 모듈 활성화: 아래 키워드를 각각 검색하여 모두 Enable 상태로 변경합니다.
+
+- ik, mobility, mobility1, plastic, data_send
+
+3. ActionGraph 확인:
+
+- Window > Visual Scripting > ActionGraph 이동
+
+- ogn 검색 후 상기 활성화한 5개 extension이 리스트에 있는지 확인합니다.
+
+**라이브러리 설치**
+
+- 가상환경이 활성화된 터미널에서 아래 명령어를 입력하여 데이터베이스 연동 라이브러리를 설치합니다.
+
+```
+"C:\isaacsim_4.2.0\kit\python\python.exe" -m pip install influxdb
+```
+**4. 가상공정 실행**
+
+1. 파일 로드: 상단 메뉴 File > Open 클릭
+
+2. 경로 선택: ```C:\isaacsim_4.2.0\intelligence\ujin_isaacsim\indy7.usd``` 파일을 엽니다.
+
+3. 시뮬레이션 시작: 왼쪽 툴바의 Play(실행) 버튼을 클릭하여 공정을 시작합니다.
