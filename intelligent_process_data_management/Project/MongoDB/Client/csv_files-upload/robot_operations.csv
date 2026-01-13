@@ -1,0 +1,13 @@
+robot_id,operation_type,load_cycle_count,operation_time
+arm_2,place,513,2025-05-01 15:01
+arm_2,place,873,2025-05-01 14:49
+arm_1,place,678,2025-05-01 14:06
+arm_2,place,927,2025-05-01 15:06
+arm_2,pick,444,2025-05-01 15:24
+arm_1,pick,428,2025-05-01 14:59
+arm_2,pick,536,2025-05-01 15:25
+arm_1,pick,878,2025-05-01 14:42
+arm_2,inspect,116,2025-05-01 14:54
+arm_1,inspect,113,2025-05-01 14:43
+arm_1,inspect,222,2025-05-09 14:43
+arm_1,inspect,111,2025-05-11 14:43
