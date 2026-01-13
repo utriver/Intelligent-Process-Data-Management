@@ -19,6 +19,7 @@ NVIDIA Isaac Sim을 활용하여 가상 공정 환경을 구축하고, 공정 �
 
 - **산업군 및 필요성 조사**: 제조 산업 내 지능화 도입 현황을 조사하고, 특히 변수가 많은 플라스틱 사출 공정에서 데이터 기반 지능화가 수율 향상에 필수적임을 분석함.
 - **데이터 종류 정의 및 분류**: 지능화 구현을 위해 필요한 데이터를 정의하고, 성격에 따라 **실시간(시계열 데이터)** 및 비실시간(로그/이미지 데이터)으로 분류하여 관리 체계를 설계함.
+<img width="1111" height="598" alt="image24" src="https://github.com/user-attachments/assets/dd231ac8-1323-45cc-9a59-eaeace4fa6f5" />
     
     - **실시간 데이터**: 보압, 수지 온도, 사출 속도, 로봇 토크 (InfluxDB 관리)
     - **비실시간 데이터**: 완제품 영상, 원료 재고량, 작동 주기 (MongoDB/HDF5 관리)
@@ -27,10 +28,15 @@ NVIDIA Isaac Sim을 활용하여 가상 공정 환경을 구축하고, 공정 �
 **2. 가상 공정(Digital Twin) 개발 및 데이터 파이프라인 구축**
 
 
+https://github.com/user-attachments/assets/31c8de91-cf48-44d4-b7b8-9435f8ac556a
+
+
+
 - **가상 공정 시뮬레이션 개발**: **NVIDIA Isaac Sim**을 활용하여 사출기, 협동 로봇, 모바일 로봇(AMR)이 포함된 가상 사출 공정 환경을 구축함.
 - **데이터 송출 시스템 구현**: 가상 공정 내에서 실시간으로 발생하는 로봇 조인트 토크 및 위치 데이터를 추출하여 **InfluxDB** 시계열 데이터베이스로 송출하는 파이프라인을 구축함.
 
 **3. 스마트 팩토리 관제 UI 시각화 전략 수립**
+<img width="1534" height="782" alt="image13" src="https://github.com/user-attachments/assets/2c8681a5-1a8a-4e5d-a5b1-f00020467a5d" />
 
 - **사용자 경험 중심 시각화**: 운영자의 즉각적인 대응을 위해 데이터 특성별 시각화 전략을 제시함.
     
@@ -49,6 +55,7 @@ $$
 $$
 
 ### 📈 주요 성과 (Key Results)
+![image27](https://github.com/user-attachments/assets/aa032cf4-a4e0-4dde-b7aa-60c43814f2cb)
 
 - **실시간 공정 가시성 및 모니터링 환경 구축**
     - 가상 및 현실 공정의 데이터를 통합하여 단일 대시보드(Dash)에서 관제 가능한 스마트 팩토리 기반을 마련함.
