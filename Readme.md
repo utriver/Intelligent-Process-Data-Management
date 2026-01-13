@@ -84,7 +84,7 @@ isaac-sim.selector.bat
 
 **3. 가상공정 세팅**
 
-**외부 파일 세팅**
+**a. 외부 파일 세팅**
 
 압축 해제된 폴더 내의 파일들을 아래 경로에 맞춰 이동 및 교체합니다.
 
@@ -100,7 +100,7 @@ isaac-sim.selector.bat
 
   - C:/isaacsim_4.2.0
 
-**가상환경 내부 설정 (Extensions)**
+**b. 가상환경 내부 설정 (Extensions)**
 
 Isaac Sim 실행 후 상단 메뉴바에서 Window > Extensions로 이동하여 다음 설정을 진행합니다.
 
@@ -120,7 +120,7 @@ Isaac Sim 실행 후 상단 메뉴바에서 Window > Extensions로 이동하여 
 
 - ogn 검색 후 상기 활성화한 5개 extension이 리스트에 있는지 확인합니다.
 
-**라이브러리 설치**
+**c. 라이브러리 설치**
 
 - 가상환경이 활성화된 터미널에서 아래 명령어를 입력하여 데이터베이스 연동 라이브러리를 설치합니다.
 
@@ -135,7 +135,7 @@ Isaac Sim 실행 후 상단 메뉴바에서 Window > Extensions로 이동하여 
 
 3. 시뮬레이션 시작: 왼쪽 툴바의 Play(실행) 버튼을 클릭하여 공정을 시작합니다.
 
-### pressure setting
+### Pressure setting
 
 **1. 환경 준비**
 
@@ -183,7 +183,7 @@ pip3 install Adafruit_DHT influxdb dynamixel-sdk
 python3 dy.py
 ```
 
-**실행 직후 자동 진행 작업:**
+**a. 실행 직후 자동 진행 작업:**
 
 1. InfluxDB 체크: 서버 연결 및 DB 존재 여부 확인 후(없을 시 자동 생성).
 
